@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kwispel & Wandel | Hondenuitlaatservice</title>
+<style>
+    :root {
+        --green: #496b4d;
+        --light: #f5f1e8;
+        --cream: #fffaf2;
+        --orange: #e99b55;
+        --dark: #24352a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: Arial, sans-serif;
+        color: var(--dark);
+        background: var(--cream);
+        line-height: 1.6;
+    }
+    header {
+        background: var(--green);
+        color: white;
+        padding: 18px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    .logo { font-size: 1.4rem; font-weight: bold; }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 22px;
+        font-weight: bold;
+    }
+    .hero {
+        background: linear-gradient(110deg, rgba(73,107,77,.92), rgba(73,107,77,.65)),
+                    url('https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1600&q=80') center/cover;
+        color: white;
+        padding: 110px 7%;
+        min-height: 530px;
+        display: flex;
+        align-items: center;
+    }
+    .hero-content { max-width: 650px; }
+    h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 22px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 28px; }
+    .button {
+        display: inline-block;
+        background: var(--orange);
+        color: white;
+        text-decoration: none;
+        padding: 13px 24px;
+        border-radius: 30px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+    section { padding: 70px 7%; }
+    .section-title { text-align: center; margin-bottom: 38px; }
+    .section-title h2 { font-size: 2.2rem; color: var(--green); }
+    .section-title p { margin-top: 8px; }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .card {
+        background: white;
+        padding: 28px;
+        border-radius: 18px;
+        box-shadow: 0 5px 18px rgba(0,0,0,.07);
+        text-align: center;
+    }
+    .card .icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .card h3 { color: var(--green); margin-bottom: 10px; }
+    .about {
+        background: var(--light);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+        align-items: center;
+    }
+    .about img { width: 100%; border-radius: 20px; }
+    .about h2 { color: var(--green); font-size: 2.2rem; margin-bottom: 15px; }
+    .opening {
+        background: var(--green);
+        color: white;
+        text-align: center;
+    }
+    .opening h2 { font-size: 2.2rem; margin-bottom: 15px; }
+    .hours {
+        max-width: 520px;
+        margin: 25px auto 0;
+        background: rgba(255,255,255,.12);
+        padding: 20px;
+        border-radius: 14px;
+    }
+    .hours p { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.25); padding: 7px 0; }
+    .hours p:last-child { border-bottom: none; }
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+    form {
+        background: white;
+        padding: 28px;
+        border-radius: 18px;
+        box-shadow: 0 5px 18px rgba(0,0,0,.07);
+    }
+    label { display: block; margin-top: 13px; font-weight: bold; }
+    input, textarea, select {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font: inherit;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    form .button { margin-top: 18px; }
+    .contact-info h3 { color: var(--green); margin-bottom: 12px; }
+    .contact-info p { margin-bottom: 14px; }
+    footer {
+        background: #24352a;
+        color: white;
+        text-align: center;
+        padding: 25px 7%;
+    }
+    @media (max-width: 800px) {
+        header { flex-direction: column; gap: 10px; }
+        nav a { margin: 0 7px; font-size: .9rem; }
+        .cards, .about, .contact-grid { grid-template-columns: 1fr; }
+        .hero { padding: 80px 7%; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🐾 Kwispel & Wandel</div>
+    <nav>
+        <a href="#diensten">Diensten</a>
+        <a href="#over-ons">Over ons</a>
+        <a href="#openingstijden">Openingstijden</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Een blije hond begint met een fijne wandeling.</h1>
+        <p>Professionele en persoonlijke hondenuitlaatservice. Wij zorgen ervoor dat jouw hond beweging, aandacht en plezier krijgt.</p>
+        <a class="button" href="#contact">Plan een wandeling</a>
+    </div>
+</section>
+
+<section id="diensten">
+    <div class="section-title">
+        <h2>Onze diensten</h2>
+        <p>Voor iedere hond een passende wandeling.</p>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="icon">🐕</div>
+            <h3>Groepswandeling</h3>
+            <p>Gezellig samen wandelen met andere honden. Goed voor beweging én socialisatie.</p><strong>€12,50 per wandeling</strong>
+        </div>
+        <div class="card">
+            <div class="icon">🦮</div>
+            <h3>Individuele wandeling</h3>
+            <p>Een persoonlijke wandeling met alle aandacht voor jouw hond en zijn of haar tempo.</p><strong>€15,00 per wandeling</strong>
+        </div>
+        <div class="card">
+            <div class="icon">🏡</div>
+            <h3>Uitlaat aan huis</h3>
+            <p>Wij halen jouw hond op en brengen hem of haar na de wandeling weer veilig thuis.</p><strong>€17,50 per wandeling</strong>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="over-ons">
+    <div>
+        <h2>Wie zijn wij?</h2>
+        <p>Wij zijn Kwispel & Wandel, een groep van 6 studenten die het erg leuk vindt om met honden te werken. We vinden het belangrijk dat honden genoeg beweging, aandacht en plezier krijgen.</p>
+        <br>
+        <p>Met onze hondenuitlaatservice willen we baasjes helpen die overdag weinig tijd hebben om hun hond uit te laten. Wij zorgen ervoor dat iedere hond op een veilige en gezellige manier naar buiten gaat. We vinden het leuk om met verschillende honden te werken en leren iedere hond graag kennen.</p>
+        <br>
+        <p>Ons doel is simpel: de hond een leuke wandeling geven en het baasje met een gerust gevoel de dag laten vervolgen.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1000&q=80" alt="Blije hond in de natuur">
+</section>
+
+<section class="opening" id="openingstijden">
+    <h2>Iedere dag geopend</h2>
+    <p>Van maandag tot en met zondag staan wij voor jullie klaar.</p>
+    <div class="hours">
+        <p><span>Maandag t/m zondag</span><strong>08:00 – 21:00</strong></p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-title">
+        <h2>Neem contact op</h2>
+        <p>Vraag vrijblijvend een wandeling aan.</p>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>🐾 Klaar om te kwispelen?</h3>
+            <p>Vul het formulier in en we nemen zo snel mogelijk contact met je op om de wensen van jou en je hond te bespreken.</p>
+            <p><strong>Openingstijden:</strong><br>Maandag t/m zondag: 08:00 – 21:00</p>
+            <p><strong>E-mail:</strong><br>Kwispelwandel@gmail.com</p>
+            <p><strong>Telefoon:</strong><br>06-18565713</p>
+        </div>
+        <form onsubmit="sendForm(event)">
+            <label for="name">Naam</label>
+            <input id="name" required placeholder="Jouw naam">
+            <label for="email">E-mailadres</label>
+            <input id="email" type="email" required placeholder="jouw@email.nl">
+            <label for="service">Welke dienst zoek je?</label>
+            <select id="service">
+                <option>Groepswandeling</option>
+                <option>Individuele wandeling</option>
+                <option>Uitlaat aan huis</option>
+            </select>
+            <label for="message">Bericht</label>
+            <textarea id="message" required placeholder="Vertel iets over jouw hond..."></textarea>
+            <button class="button" type="submit">Aanvraag versturen</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Kwispel & Wandel – Met liefde voor iedere hond 🐾</p>
+</footer>
+
+<script>
+function sendForm(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value;
+
+    const subject = "Nieuwe aanvraag - Kwispel & Wandel";
+    const body =
+        "Nieuwe aanvraag via de website%0D%0A%0D%0A" +
+        "Naam: " + encodeURIComponent(name) + "%0D%0A" +
+        "E-mailadres: " + encodeURIComponent(email) + "%0D%0A" +
+        "Dienst: " + encodeURIComponent(service) + "%0D%0A%0D%0A" +
+        "Bericht:%0D%0A" + encodeURIComponent(message);
+
+    window.location.href =
+        "mailto:Kwispelwandel@gmail.com?subject=" +
+        encodeURIComponent(subject) + "&body=" + body;
+}
+</script>
+</body>
+</html>
